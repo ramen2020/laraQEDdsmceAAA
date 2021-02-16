@@ -1,12 +1,14 @@
+larack_dir = ../laradock
+
 up:
-	cd "../laradock" && docker-compose up -d nginx mysql workspace
+	cd $(larack_dir) && docker-compose up -d nginx mysql workspace
 work:
-	cd "../laradock" && docker-compose exec workspace bash
+	cd $(larack_dir) && docker-compose exec workspace bash
 down:
-	cd "../laradock" && docker-compose down
+	cd $(larack_dir) && docker-compose down
 ps:
-	cd "../laradock" && docker-compose ps
+	cd $(larack_dir) && docker-compose ps
 stop:
-	cd "../laradock" && docker-compose stop
+	cd $(larack_dir) && docker-compose stop
 open:
 	open http://localhost
