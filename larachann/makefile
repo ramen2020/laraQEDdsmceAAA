@@ -4,6 +4,8 @@ up:
 	cd $(larack_dir) && docker-compose up -d nginx mysql workspace
 work:
 	cd $(larack_dir) && docker-compose exec workspace bash
+db:
+	cd $(larack_dir) && docker-compose exec mysql bash
 down:
 	cd $(larack_dir) && docker-compose down
 ps:
