@@ -12,5 +12,7 @@ ps:
 	cd $(larack_dir) && docker-compose ps
 stop:
 	cd $(larack_dir) && docker-compose stop
+test:
+	cd $(larack_dir) && docker-compose exec workspace php artisan test
 open:
 	open http://localhost
