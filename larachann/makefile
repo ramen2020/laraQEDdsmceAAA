@@ -2,7 +2,7 @@ larack_dir = ../laradock
 class=
 
 up:
-	cd $(larack_dir) && docker-compose up -d nginx mysql workspace
+	cd $(larack_dir) && docker-compose up -d nginx mysql workspace selenium
 work:
 	cd $(larack_dir) && docker-compose exec workspace bash
 db:
