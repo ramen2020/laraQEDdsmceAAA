@@ -19,3 +19,9 @@ unit_test:
 	cd $(larack_dir) && docker-compose exec workspace php artisan test --filter=${class}
 open:
 	open http://localhost
+cash:
+	cd $(larack_dir) && docker-compose exec workspace php artisan optimize:clear
+	# php artisan config:clear
+	# php artisan route:clear
+	# php artisan view:clear
+	# php artisan cache:clear
